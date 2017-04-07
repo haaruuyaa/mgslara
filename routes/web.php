@@ -10,7 +10,11 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/',function(){
+    return view('admin_template');
 });
+
+//Master Helper
+Route::get('master/helper','MasterHelperController@index');
+Route::get('master/helper/create','MasterHelperController@create');
+Route::post('master/helper/store','MasterHelperController@store');
