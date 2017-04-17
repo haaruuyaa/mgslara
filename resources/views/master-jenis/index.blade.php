@@ -9,14 +9,12 @@
                 <table class="table table-bordered">
                     <tr style="background-color: #3c8dbc;">
                         <th style="width: 10px">#</th>
-                        <th>Nama Helper</th>
-                        <th>No Tel</th>
+                        <th>Nama Jenis</th>
                     </tr>
-                    @foreach($helpers as $index => $helper)
+                    @foreach($jenis as $index => $jen)
                     <tr>
                         <td>{{$index+1}}.</td>
-                        <td>{{$helper->HelperName}}</td>
-                        <td>{{$helper->HelperPhone}}</td>
+                        <td>{{$jen->JenisName}}</td>
                     </tr>
                     @endforeach 
                   </table>
@@ -25,5 +23,5 @@
     </div>
 </div>
 
-<a class="btn btn-info" href='{{url('master/helper/create')}}'>Tambah Helper Baru</a>
+<a class="btn btn-info" href='{{url('master/jenis/create')}}'>Tambah Jenis Baru</a>
 @endsection

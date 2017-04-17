@@ -18,3 +18,8 @@ Route::get('/',function(){
 Route::get('master/helper','MasterHelperController@index');
 Route::get('master/helper/create','MasterHelperController@create');
 Route::post('master/helper/store','MasterHelperController@store');
+
+//Master Jenis
+Route::get('master/jenis','MasterJenisController@index');
+Route::get('master/jenis/create','MasterJenisController@create');
+Route::post('master/jenis/store','MasterJenisController@store');

@@ -24,8 +24,8 @@ class MasterHelperController extends Controller
     {
         $helper = new MasterHelper();
         
-        $helper->helperName = $request->helperName;
-        $helper->helperPhone = $request->helperPhone;
+        $helper->HelperName = $request->helperName;
+        $helper->HelperPhone = $request->helperPhone;
         $helper->save();
         
         return redirect()->action('MasterHelperController@index')->with('success','Data Insertion was successfull');

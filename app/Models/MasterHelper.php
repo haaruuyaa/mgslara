@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class MasterHelper extends Model
 {
     //
-    protected $guarded = ['helperId'];
+    protected $guarded = ['HelperId'];
     
-    protected $table = 'master-helper';
+    protected $table = 'masterhelper';
 }
