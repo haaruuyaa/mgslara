@@ -7,7 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class MasterJenis extends Model
 {
     //
-    protected $guarded = ['JenisId'];
+    protected $guarded = [''];
     
     protected $table = 'masterjenis';
+    
+    public $timestamps = false;
 }

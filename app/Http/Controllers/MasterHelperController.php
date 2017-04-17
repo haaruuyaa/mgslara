@@ -8,9 +8,9 @@ use App\Models\MasterHelper;
 class MasterHelperController extends Controller
 {
     //
-    public function index()
+    public function index(MasterHelper $db)
     {
-        $helpers = MasterHelper::all();
+        $helpers = $db->all();
         
         return view('master-helper/index',['page_title' => 'Master Helper','helpers' => $helpers]);
     }
@@ -20,10 +20,11 @@ class MasterHelperController extends Controller
         return view('master-helper/create',['page_title' => 'Tambah Helper Baru']);
     }
     
-    public function store(Request $request)
+    public function store(Request $request, MasterHelper $helper)
     {
-        $helper = new MasterHelper();
-        
+        $generateID = $helper->generateID()[0]->HelperId;
+                
+        $helper->HelperId = $generateID;
         $helper->HelperName = $request->helperName;
         $helper->HelperPhone = $request->helperPhone;
         $helper->save();
